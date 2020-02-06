@@ -23,6 +23,7 @@ theme_settings:
   header_text_feature_image:
   footer_text: >
     <p>Made with 💙 by <a href="https://divayprakash.github.io/">Divay Prakash</a></p>
+    <p>Hosted on <a href="https://pages.github.com/">GitHub</a> and powered by <a href="https://jekyllrb.com/">Jekyll</a> &bull; Based on <a href="https://github.com/rohanchandra/type-theme/">Type Theme</a></p>
 
   # Icons
   rss: true
