@@ -6,6 +6,14 @@
 </li>
 {% endif %}
 
+{% if site.theme_settings.website %}
+<li>
+	<a href="{{ site.theme_settings.website }}" title="{{ site.theme_settings.str_follow_on }} my website">
+		<i class="fa fa-fw fa-globe"></i>
+	</a>
+</li>
+{% endif %}
+
 {% if site.theme_settings.email_address %}
 <li>
 	<a href="mailto:{{ site.theme_settings.email_address }}" title="{{ site.theme_settings.str_email }}">
