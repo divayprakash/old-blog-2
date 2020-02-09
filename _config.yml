@@ -11,16 +11,7 @@ theme_settings:
   gravatar: # Email MD5 hash
   description: "A geek's eclectic contemplations" # used by search engines
 
-  # Header and footer text
-  header_text: >
-    <p>
-      Hello! I'm Divay Prakash and welcome to my blog <a href="https://randmusings.github.io/">rand() musings</a>.
-    </p>
-    <p>
-      This is just an outlet for a stream of random and sometimes not-so-random thoughts so please bear with me.
-      And if you find it fun, then do stick around for more! You can check out my latest posts below.
-    </p>
-  header_text_feature_image:
+  # Footer text
   footer_text: >
     <p>Made with 💙 by <a href="https://divayprakash.github.io/">Divay Prakash</a></p>
     <p>Hosted on <a href="https://pages.github.com/">GitHub</a> and powered by <a href="https://jekyllrb.com/">Jekyll</a> &bull; Based on <a href="https://github.com/rohanchandra/type-theme/">Type Theme</a></p>

@@ -1,3 +1,56 @@
 ---
-layout: home
+layout: default
 ---
+
+<div class="home">
+  <div class="call-out" style="background-image: url('')">
+    <p><img src="{{ site.baseurl }}/assets/img/profile.jpeg"></p>
+    <p>
+      Hello! I'm Divay Prakash and welcome to my blog <a href="https://randmusings.github.io/">rand() musings</a>.
+    </p>
+    <p>
+      This is just an outlet for a stream of random and sometimes not-so-random thoughts so please bear with me.
+      And if you find it fun, then do stick around for more! You can check out my latest post <a href="{{ site.posts.first.url }}">here</a> or all my posts below.
+    </p>
+  </div>
+
+  <div class="posts">
+    {% for post in paginator.posts %}
+    <div class="post-teaser">
+      <header>
+        <h1>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title }}
+          </a>
+        </h1>
+        <p class="meta">
+          {{ post.date | date: "%B %-d, %Y | %l:%M %p" }}
+        </p>
+      </header>
+      <div class="excerpt">
+        {{ post.excerpt }}
+        <a class="button" href="{{ post.url | relative_url }}">
+          {{ site.theme_settings.str_continue_reading }}
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url | replace: '//', '/' }}" class="button" >
+      <i class="fa fa-chevron-left"></i>
+      {{ site.theme_settings.str_previous_page }}
+    </a>
+    {% endif %}
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url | replace: '//', '/' }}" class="button" >
+      {{ site.theme_settings.str_next_page }}
+      <i class="fa fa-chevron-right"></i>
+    </a>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
