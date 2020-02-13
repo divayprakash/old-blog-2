@@ -1,0 +1,17 @@
+gem install jekyll
+bundle install
+gem uninstall eventmachine --force
+gem install eventmachine --platform ruby
+
+DOESNT RELOAD CONFIG.YML :
+bundle exec jekyll serve --livereload
+
+RELOADS CONFIG.YML :
+watchy -w _config.yml -- ruby "C:\Ruby25-x64\lib\ruby\gems\2.5.0\gems\bundler-2.1.2\exe\bundle" exec -- ruby "C:\Ruby25-x64\lib\ruby\gems\2.5.0\gems\jekyll-3.8.5\exe\jekyll" serve --live
+reload
+
+WHY WATCHY NEEDS THE COMPLEX SHITTY COMMAND:
+https://github.com/jekyll/jekyll/issues/2302#issuecomment-71201965
+
+CHECK THIS COMMIT FROM OLD BLOG :
+https://github.com/divayprakash/old-blog/commit/151664a5c6fad4dff0f9144ee574424be7d90e38
